@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/85aaa41db7.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Cart</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <%- include('partials/header')%>
+
+    <div style="color: white; text-align: center; margin: 100px 0px">
+      <h1 style="text-align: center; font-size: 50px">Cart</h1>
+
+      <% if(itemList.length != 0){var sum =0; %>
+      
+
+      <div class="cart-items-container">
+        <% itemList.forEach(function(item){ %> 
+          <% sum += item.order.price; %>
+        <div class="cart-item">
+          <button></button>
+          <form action="/deleteItem" method="post">
+            <button type="submit" name="itemID" value="<%= item.id %>">
+              <span
+                class="fas fa-times fa-2x"
+                style="position: relative; float: left"
+              ></span>
+            </button>
+          </form>
+
+          <img
+            src="<%= item.order.imgUrl %>"
+            alt="Cake Img"
+            style="max-width: 160px; max-height: 160px"
+          />
+
+          <div class="content">
+            <h3><%= item.order.name %></h3>
+            <div class="price">&#x20b9; <%= item.order.price %></div>
+          </div>
+        </div>
+        <% }); %>
+
+        <h2>Total Amount : <%= sum; %> </h2>
+        
+
+        <a href="/checkout" class="btn">Checkout Now</a>
+      </div>
+      <% }else{ %>
+
+      <div style="margin: 150px 0px">
+        <h1 style="font-size: 70px ;">No Items In The Cart.</h1>
+        <a href="/#menu" style="color: white">CLICK HERE TO ADD ITEM !</a>
+      </div>
+
+      <% } %>
+
+    </div>
+  </body>
+</html>
+
+<!-- <div class="cart-item">
+          <span class="fas fa-times fa-2x"></span>
+          <img
+            src="/images/b3.png"
+            alt=""
+            style="max-width: 160px; max-height: 160px"
+          />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">&#x20b9; 415.99</div>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <span class="fas fa-times fa-2x"></span>
+          <img
+            src="/images/b4.png"
+            alt=""
+            style="max-width: 160px; max-height: 160px"
+          />
+          <div class="content">
+            <h3>cart item 02</h3>
+            <div class="price">&#x20b9; 415.99</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times fa-2x"></span>
+          <img
+            src="/images/bachground1.png"
+            alt=""
+            style="max-width: 160px; max-height: 160px"
+          />
+          <div class="content">
+            <h3>cart item 03</h3>
+            <div class="price">&#x20b9; 415.99</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times fa-2x"></span>
+          <img
+            src="/images/background2.png"
+            alt=""
+            style="max-width: 160px; max-height: 160px"
+          />
+          <div class="content">
+            <h3>cart item 04</h3>
+            <div class="price">&#x20b9; 415.99</div>
+          </div>
+        </div> -->

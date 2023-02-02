@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome Icon -->
+    <script
+      src="https://kit.fontawesome.com/85aaa41db7.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Register!</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/header')%>
+
+    <div
+      style="text-align: center; color: white; margin-top: 350px"
+      class="reg-form searchd-form"
+    >
+      <h1>Register</h1>
+      <form action="/register" method="post">
+        <div class="content">
+          <div class="input-field">
+            <input type="text" name="name" placeholder="Firstname" id="java" />
+          </div>
+          <div class="input-field">
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="input-field">
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+        </div>
+        <div class="action">
+          <button type="submit">Sign in</button>
+        </div>
+      </form>
+
+      <a href="/login">Already Have An Account? Login Here!</a>
+    </div>
+
+    <!-- <div class="reg-form searchd-form">
+  <form action="/api/user/register" method="post">
+    <h1>Register Here !</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" name="name" placeholder="Firstname" id="java" />
+      </div>
+      <div class="input-field">
+        <input type="email" name="email" placeholder="Email" />
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" placeholder="Password" />
+      </div>
+
+    </div>
+    <div class="action">
+      <button>Sign in</button>
+    </div>
+  </form>
+</div> -->
+  </body>
+</html>

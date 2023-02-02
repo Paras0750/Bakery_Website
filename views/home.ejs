@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- EXTERNAL CSS STYLESHEET -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Font Awesome Icon -->
+    <script
+      src="https://kit.fontawesome.com/85aaa41db7.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bakery</title>
+  </head>
+
+  <body>
+    <%- include('partials/header')%>
+    <!-- <header class="header">
+      
+        <a href="#" class="logo">
+            <img src="https://i.pinimg.com/originals/e3/93/95/e39395ad652f58e2c927196b4d465d46.jpg" alt="">
+          </a>
+        
+          <nav class="navbar">
+              <a href="/#home">HOME</a>
+              <a href="/#about">ABOUT</a>
+              <a href="/#menu">MENU</a>
+              <a href="/#products">PRODUCTS</a>
+              <a href="/#review">REVIEW</a>
+              <a href="/#contact">CONTACT</a>
+          </nav>
+        
+          <div class="icons">
+              <div class="fas fa-bars" id="menu-btn"></div>
+            <%    if(login && name){ %>
+                <a href="/cart">
+                <div class="fas fa-shopping-cart" id="cart-btn"> CART</div></a>
+                <div class="fa fa-user" id="auth-user"> <%= name %> </div>
+            <%    }else{  %>
+                <div class="fas" id="reg-btn"><a href="/register">Register</a></div>
+                <div class="fas" id="reg-btn"><a href="/login">Login</a></div>
+            <%  } %>
+          </div>
+        
+    </header> -->
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Get a smile with a piece of cake.</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
+          labore, sint cupiditate distinctio tempora reiciendis.
+        </p>
+        <a href="#menu" class="btn">get yours now</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <%- include('partials/about')%>
+
+    <!-- Menu section starts  -->
+
+    <section class="menu" id="menu">
+      <h1 class="heading">our <span>menu</span></h1>
+      <div class="box-container">
+        <% itemList.forEach(function(item){ %>
+        <div class="box">
+          <form action="/addToCart" method="post">
+            <img src="<%=item.imgUrl %>" alt="">
+            <h3><%= item.name %></h3>
+            <div class="price">
+              &#x20b9; <%= item.price %> <span><%= item.orignalPrice %> </span>
+            </div>
+            <button
+              class="btn"
+              type="submit"
+              name="OrderID"
+              value="<%= item._id %>"
+            >
+              Add to cart
+            </button>
+          </form>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <!-- Best Seller Section -->
+    <%- include('partials/bestSeller')%>
+
+    <!-- Reviews Section -->
+
+    <%- include('partials/reviews')%>
+
+    <!-- Contact Section -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>Contact</span> Us</h1>
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1629452077891!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <form action="">
+          <h3>Get In Touch</h3>
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="name" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" placeholder="email" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="number" placeholder="number" />
+          </div>
+          <input type="submit" value="contact now" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <%- include('partials/footer')%>
+
+    <script src="index.js"></script>
+  </body>
+</html>

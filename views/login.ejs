@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome Icon -->
+    <script
+      src="https://kit.fontawesome.com/85aaa41db7.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login!</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/header')%>
+
+    <div style="text-align: center; color: white; margin-top: 350px;" class="reg-form searchd-form">
+      <h1>Login</h1>
+      <form action="/login" method="post">
+
+        <div class="content">
+          <div class="input-field">
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="input-field">
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+        </div>
+        <div class="action">
+          <button type="submit">Sign in</button>
+        </div>
+        
+      </form>
+
+      <a href="/register" style="color: white; margin-top: 450px;">Already Have An Account? Login Here!</a>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

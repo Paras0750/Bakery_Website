@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Kolker+Brush&family=Merriweather:ital,wght@1,300&family=Montserrat&family=Montserrat+Subrayada&family=Passions+Conflict&family=Roboto:wght@100;300;400;700&family=Ubuntu&display=swap');
+
+/* Basic code for designing website  */
+:root{
+    --main-color:#d3ad7f;
+    /* --black:#13131a;
+    --bg:#010103; */
+    --black:#1b1b1e;
+    --bg:#1b1b1e;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.clr{
+    color: green;
+    background-color: transparent;
+}
+
+/* Header which include logo and navbar */
+.header{
+    
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    /* border-bottom: var(--border); */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 5rem;
+    border-radius: 25%;
+}
+
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+    height: 380px;
+    width: 300px;
+}
+
+
+.login-form {
+    background: #fff;
+    width: 500px;
+    /* margin: 6 auto; */
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  }
+  .login-form h1 {
+    padding: 35px 35px 0 35px;
+    font-weight: 300;
+  }
+  .login-form .content {
+    padding: 35px;
+    text-align: center;
+  }
+  .login-form .input-field {
+    padding: 12px 5px;
+  }
+  .login-form .input-field input {
+    font-size: 16px;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    padding: 10px 1px;
+    border: 0;
+    border-bottom: 1px solid #747474;
+    outline: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  .login-form .input-field input::-webkit-input-placeholder {
+    text-transform: uppercase;
+  }
+  .login-form .input-field input::-moz-placeholder {
+    text-transform: uppercase;
+  }
+  .login-form .input-field input:-ms-input-placeholder {
+    text-transform: uppercase;
+  }
+  .login-form .input-field input::-ms-input-placeholder {
+    text-transform: uppercase;
+  }
+  .login-form .input-field input::placeholder {
+    text-transform: uppercase;
+  }
+  .login-form .input-field input:focus {
+    border-color: #222;
+  }
+  .login-form a.link {
+    text-decoration: none;
+    color: #747474;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .login-form .action {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .login-form .action button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .login-form .action button:hover {
+    background: #d8d8d8;
+  }
+  .login-form .action button:nth-child(2) {
+    background: #2d3b55;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+  }
+  .login-form .action button:nth-child(2):hover {
+    background: #3c4d6d;
+  }
+
+
+/* agar htana padha toh yaha se upper ka hta denge */
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top: 100%;
+    right:-100%;
+    height: calc(100rem - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover{
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 0.5rem;
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-container .btn{
+    text-align: center;
+    width: 100%;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url('https://img.freepik.com/free-photo/close-up-view-chocolate-cake-concept_23-2148746724.jpg?w=2000') no-repeat;
+    background-size: 1200px;
+    /* background-size: cover; */
+    background-position: center;
+}
+
+.home .content{
+    margin-left: 325px;
+    margin-bottom: 260px;
+    max-width: 60rem;
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color:#eee;
+}
+
+/* About Section */
+.about{
+    margin-top: 50px;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color:#ccc;
+    padding:1rem 0;
+    line-height: 1.8;
+}
+
+/* Menu Section */
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+    background:rgb(164, 158, 158);
+    color: #000;
+    transform: scale(1.1);
+}
+
+.menu .box-container .box:hover > *{
+    color:var(--black);
+    color: #000;
+}
+
+
+/* Test Section */
+
+.container{
+    width: 500px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.rating{
+    text-align: center;
+    color:var(--main-color);
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+}
+.rating span{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+}
+
+.product{
+    width: 400px;
+    height: 550px;
+    perspective: 1000px;
+}
+
+.product-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.product-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform: translateZ(25px);
+}
+.product-front:hover{
+    background: #fff;
+}
+
+.product-bottom{
+    padding: 50px 30px;
+}
+
+.color-select{
+    display: flex;
+    float: right;
+    margin-top: -10px;
+}
+
+/* It sets the height of div at the right bottom */
+.select-item{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top: 400px;
+    right: 100px;
+}
+
+.select-item img{
+    width: 80%;
+    padding-top: 10%;
+}
+
+.select-item:hover{
+    background: #d3ad7f;
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.product-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    transform:translateZ(-25px) rotateY(180deg);
+
+}
+.product-back:hover{
+    background: #fff;
+    color: #000;
+}
+
+.left-side, .right-side{
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    transform: rotateY(90deg);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+.right-side{
+    transform: rotateY(-90deg);
+    right: -25px;
+    left: auto;
+}
+
+#frontImg{
+    width: 340px;
+    top: 70px;
+    left: 20px;
+    position: absolute;
+    transform: translateZ(50px);
+    transition: 1s;
+    z-index: 100;
+}
+
+#backImg{
+    width: 340px;
+    top: 70px;
+    left: -650px;
+    position: absolute;
+    transform: translateZ(50px) rotate(-30deg);
+    transition: 1s;
+    z-index: 100;
+}
+
+
+/* Reviews Section */
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.review .box-container .box{
+    border:var(--border);
+    text-align: center;
+    padding:3rem 2rem;
+}
+
+.review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:2rem 0;
+}
+
+.review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box h3{
+    padding:1rem 0;
+    font-size: 2rem;
+    color:#fff;
+}
+
+.review .box-container .box .stars i{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+/* Contact Section */
+
+.contact .row{
+    display: flex;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+
+/* Footer Section */
+.footer{
+    background:var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+
+
+
+/* Responsive Nature of website */
+/* Whenever Screen size is less then 991px the below condition will apply */
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    .home{
+        margin-top: 30px;
+        background-position: center;
+    }
+    .home h3{
+        margin-top: 30px;
+        margin-right:550px;
+        text-align:left;
+        margin-left: -200px;
+    }
+    .home p{
+        margin-right:550px;
+        text-align:left;
+        margin-left: -200px;
+    }
+
+    .home a{
+        margin-right:550px;
+        text-align:left;
+        margin-left: -200px;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+}
+
+
+
+@media (max-width:991px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        color: var(--black);
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    .header .search-form.active{
+        width: 90%;
+        right: 2rem;
+    }
+}
+
+
+

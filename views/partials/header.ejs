@@ -1,0 +1,31 @@
+<header class="header">
+
+  <a href="/" class="logo">
+    <img
+      src="https://i.pinimg.com/originals/e3/93/95/e39395ad652f58e2c927196b4d465d46.jpg"
+      alt=""
+    />
+  </a>
+
+  <nav class="navbar">
+    <a href="/#home">HOME</a>
+    <a href="/#about">ABOUT</a>
+    <a href="/#menu">MENU</a>
+    <a href="/#products">PRODUCTS</a>
+    <a href="/#review">REVIEW</a>
+    <a href="/#contact">CONTACT</a>
+  </nav>
+
+  <div class="icons clr">
+    <div class="fas fa-bars" id="menu-btn"></div>
+    <% if(login && name){ %>
+    <a href="/cart"><div class="fas fa-shopping-cart" id="cart-btn">CART</div></a>
+    <a href="/logout"><div class="fa-solid fa-arrow-right-from-bracket" id="logout-btn">Log Out</div></a>
+    <a href="/"><div class="fa fa-user" id="auth-user"><%= name %></div></a>
+    
+    <% }else{ %>
+      <div class="fas" id="reg-btn"><a href="/register" style="color: white;">Register</a></div>
+      <div class="fas" id="reg-btn"><a href="/login" style="color: white;">Login</a></div>
+    <% } %>
+  </div>
+</header>
