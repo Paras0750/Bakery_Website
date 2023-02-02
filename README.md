@@ -10,7 +10,7 @@ You Should have mongoDB and Node installed in your system
 - Open in Code editor
 - Add a .env file and paste this 
   
-  SESSION_SECRET="myTopSecret"
+  SESSION_SECRET="myTopSecret" <br />
   MONGO_URI="mongodb://0.0.0.0:27017/bakeryDB"
 
 - In terminal type "npm install"
