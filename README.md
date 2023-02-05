@@ -6,10 +6,6 @@ Before you get started, you'll need to make sure you have the following software
 - [Node.js](https://nodejs.org/en/download/)
 - [MongoDB](https://docs.mongodb.com/manual/installation/)
 
-## Download the Project
-1. Go to the [GitHub repository](https://github.com/YourGithubRepository) where the project is stored and click the **Clone** button.
-2. You can either download the project as a zip file or use Git to clone it to your local machine.
-
 ## Set Up the Environment
 1. Open the project in your code editor.
 2. Create a new file in the project root directory and name it `.env`.
@@ -22,13 +18,13 @@ MONGO_URI="mongodb://0.0.0.0:27017/bakeryDB"
 1. Open the terminal and navigate to the project directory.
 2. Run the following command to install the dependencies:
 
-npm install
+> npm install
 
 
 ## Start MongoDB Server
 1. In the terminal, run the following command to start the MongoDB server:
 
-mongod
+> mongod
 
 
 ## Add Sellingitems Collection
@@ -37,7 +33,7 @@ mongod
 
 ## Start the Project
 1. In the terminal, run the following command to start the project:
-npm start
+> npm start
 
 
 ## Get Your Ovens Ready
