@@ -15,32 +15,69 @@
   </head>
   <body>
     <%- include('partials/header')%>
-
-    <div
-      style="text-align: center; color: white; margin-top: 350px"
-      class="reg-form searchd-form"
-    >
-      <h1>Register</h1>
-      <form action="/register" method="post">
-        <div class="content">
-          <div class="input-field">
-            <input type="text" name="name" placeholder="Firstname" id="java" />
+    <section class="register" id="register">
+      <div
+        style="
+          text-align: center;
+          color: blueviolet;
+          margin-top: 100px;
+          background-color: var(--bg);
+          font-size: large;
+        "
+        class="reg-form searchd-form"
+      >
+        <h1>Register</h1>
+        <form action="/register" method="post">
+          <div class="content">
+            <div style="padding-top: 15px" class="input-field">
+              <input
+                style="background-color: var(--bg); size: 100px"
+                type="text"
+                name="name"
+                placeholder="Firstname"
+                id="java"
+              />
+            </div>
+            <div style="padding-top: 15px" class="input-field">
+              <input
+                style="background-color: var(--bg)"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div style="padding-top: 15px" class="input-field">
+              <input
+                style="background-color: var(--bg)"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
           </div>
-          <div class="input-field">
-            <input type="email" name="email" placeholder="Email" />
+          <div class="action">
+            <button
+              style="
+                border-width: 1px;
+                border-style: solid;
+                border-color: blueviolet;
+                background-color: var(--bg);
+                color: blueviolet;
+                size: 100px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                padding: 5px;
+              "
+              type="submit"
+            >
+              Sign in
+            </button>
           </div>
-          <div class="input-field">
-            <input type="password" name="password" placeholder="Password" />
-          </div>
-        </div>
-        <div class="action">
-          <button type="submit">Sign in</button>
-        </div>
-      </form>
+        </form>
 
-      <a href="/login">Already Have An Account? Login Here!</a>
-    </div>
-
+        <a href="/login">Already Have An Account? Login Here!</a>
+      </div>
+    </section>
     <!-- <div class="reg-form searchd-form">
   <form action="/api/user/register" method="post">
     <h1>Register Here !</h1>
