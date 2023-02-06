@@ -327,6 +327,15 @@ section{
     /* background-size: cover; */
     background-position: center;
 }
+.register{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url('https://img.freepik.com/free-photo/close-up-view-chocolate-cake-concept_23-2148746724.jpg?w=2000') no-repeat;
+    background-size: 1200px;
+    /* background-size: cover; */
+    background-position: center;
+}
 
 .home .content{
     margin-left: 325px;
